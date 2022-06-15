@@ -49,7 +49,7 @@ function App() {
   };
 
   const handleSendOGY = async () => {
-    const blockHeight = await actor.transfer({
+    const blockHeight = await actor.send_dfx({
       to: recipient,
       fee: {
         e8s: 2000000n,
@@ -60,7 +60,7 @@ function App() {
       // eslint-disable-next-line no-undef
       amount: { e8s: BigInt(amount) },
     });
-    console.log(blockHeight);
+    console.log();
   };
 
   useEffect(() => {
